@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2019/6/19 16:26
  */
 @Configuration
-@MapperScan("com.anwei.box.modules.**.mapper")
+@MapperScan("com.anwei.box.modules.*.*.mapper")
 public class MyBatisPlusConfig {
 
     /**
