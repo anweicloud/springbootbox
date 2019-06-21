@@ -22,8 +22,8 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         LOGGER.info("start insert fill ....");
         //避免使用metaObject.setValue()
-        if (metaObject.hasSetter("org_id") && metaObject.getValue("org_id") == null) {
-            this.setFieldValByName("org_id", 1573, metaObject);
+        if (metaObject.hasSetter("orgId") && metaObject.getValue("orgId") == null) {
+            this.setFieldValByName("orgId", 1573, metaObject);
         }
 
         if (metaObject.hasSetter("createTime")) {

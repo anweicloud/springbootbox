@@ -4,13 +4,10 @@ import com.anwei.box.modules.system.user.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * <p>
- *  Mapper 接口
- * </p>
- *
- * @author Anwei
- * @since 2019-06-19
- */
+*
+* @author: Anwei
+* @create: 2019/6/21
+*/
 public interface UserMapper extends BaseMapper<User> {
     public User mapperTest();
 }

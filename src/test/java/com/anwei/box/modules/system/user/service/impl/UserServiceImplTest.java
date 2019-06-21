@@ -1,8 +1,10 @@
 package com.anwei.box.modules.system.user.service.impl;
 
 import com.anwei.box.core.web.entity.BaseEntity;
+import com.anwei.box.core.web.service.IBaseService;
 import com.anwei.box.modules.system.user.entity.User;
 import com.anwei.box.modules.system.user.mapper.UserMapper;
+import com.anwei.box.modules.system.user.service.IUserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,6 +22,12 @@ public class UserServiceImplTest {
 
     @Resource
     public UserMapper mapper;
+
+    @Resource
+    public IUserService service;
+
+    @Resource
+    public IBaseService baseService;
 
     @Test
     public void testInsert() {
@@ -132,6 +140,16 @@ public class UserServiceImplTest {
     @Test
     public void testQueryMapper() {
         System.out.println(mapper.mapperTest());
+    }
+
+    @Test
+    public void testServiceMethod1() {
+        System.out.println(service.count());
+    }
+
+    @Test
+    public void testQuery() {
+        System.out.println(baseService.findById(User.class));
     }
 
 }

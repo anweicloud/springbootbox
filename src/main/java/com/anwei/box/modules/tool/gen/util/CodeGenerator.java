@@ -18,10 +18,10 @@ import java.util.List;
 public class CodeGenerator {
 
     public static void main(String[] args) {
-        generatorCode("user", "sys", "sys_user");
+        generatorCode("user", "sys", "com.anwei.box.modules.system", "sys_user");
     }
 
-    public static void generatorCode(String moduleName, String tablePrefix, String... tableNames) {
+    public static void generatorCode(String moduleName, String tablePrefix, String packageName, String... tableNames) {
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -47,7 +47,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(moduleName);
-        pc.setParent("com.anwei.box.modules.system");
+        pc.setParent(packageName);
         mpg.setPackageInfo(pc);
 
         // 自定义配置

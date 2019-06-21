@@ -3,7 +3,7 @@
 <mapper namespace="com.anwei.box.modules.system.user.mapper.UserMapper">
 
     <select id="mapperTest" resultType="User">
-        SELECT * FROM sys_user WHERE org_id=2 AND username='Anwei' AND delete_flag=0 and 1=1
+        SELECT * FROM sys_user WHERE org_id=2 AND username='Anwei' AND delete_flag=0
     </select>
 
 </mapper>
